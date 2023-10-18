@@ -1,12 +1,13 @@
 "use client"
 import Link from 'next/link';
-import { Textarea, Container } from '@mantine/core';
 // import { Post } from '@/Interfaces/Iapi';
 import React, { useEffect, useState, ChangeEvent } from 'react';
-import { Button } from '@mantine/core';
-import { Input } from '@mantine/core';
+
 import { Portal } from '@mantine/core';
 import classes from './FeaturesGrid.module.css';
+import { Button, Input, Textarea } from '@mantine/core';
+
+import styles from './featuresGrid.module.css';
 
 
 export default function Login() {
@@ -102,40 +103,47 @@ try {
 
 
   return (
-    <div>
-      <h1>Blog Posts</h1>
-      <ul>
+    <div className={styles.container}>
+      <h1 className={styles.title}>Blog Posts</h1>
+      <ul className={styles.posts}>
         {posts &&
           posts.map((post) => (
             <li key={post.id}>
               <Link href={`/blog/${post.id}`}>
-              <h2>{post.title}</h2>
+                <h2>{post.title}</h2>
               </Link>
-              
+
               <p>{post.content}</p>
             </li>
           ))}
       </ul>
-      <h2>Create New Post</h2>
-      <form onSubmit={handleSubmit}>
-        <Input
-          type="text"
-          placeholder="Title"
-          value={newPost.title}
-          onChange={(e) => setNewPost({ ...newPost, title: e.target.value })}
-        />
-        <Textarea
-          placeholder="Content"
-          value={newPost.content}
-          onChange={(e) => setNewPost({ ...newPost, content: e.target.value })}
-        />
-        <input
-          type="file"
-          accept="image/*"
-          onChange={handleImageChange}
-        />
-        <Button type="submit">Create Post</Button>
-      </form>
+      <div className={styles.newPost}>
+        <h2>Faça uma postagem</h2>
+        <form onSubmit={handleSubmit}>
+          <Input
+            type="text"
+            placeholder="Title"
+            value={newPost.title}
+            onChange={(e) => setNewPost({ ...newPost, title: e.target.value })}
+            className={styles.input}
+          />
+          <Textarea
+            placeholder="Content"
+            value={newPost.content}
+            onChange={(e) => setNewPost({ ...newPost, content: e.target.value })}
+            className={styles.input}
+          />
+          <input
+            type="file"
+            accept="image/*"
+            onChange={handleImageChange}
+            className={styles.input}
+          />
+          <Button type="submit" variant="filled" className={styles.submitButton}>
+            Postar
+          </Button>
+        </form>
+      </div>
     </div>
   );
 }
