@@ -1,6 +1,6 @@
 "use client"
 import { Post } from '@/Interfaces/Iapi';
-
+import Image from 'next/image'
 import { useEffect, useState } from 'react';
 
 export default function Page({ params }) {
@@ -26,6 +26,12 @@ export default function Page({ params }) {
         <div>
           <h2>{post.title}</h2>
           <p>{post.content}</p>
+          <Image
+        src={post.imageUrl} // Use the image URL here
+        alt={post.title}
+        width={500}
+        height={500}
+      />
           <p>{post.date}</p>
           {/* Display the image here */}
         </div>

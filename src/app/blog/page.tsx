@@ -1,9 +1,13 @@
 "use client"
 import Link from 'next/link';
-import { TextInput } from '@mantine/core';
+import { Textarea, Container } from '@mantine/core';
 // import { Post } from '@/Interfaces/Iapi';
 import React, { useEffect, useState, ChangeEvent } from 'react';
 import { Button } from '@mantine/core';
+import { Input } from '@mantine/core';
+import { Portal } from '@mantine/core';
+import classes from './FeaturesGrid.module.css';
+
 
 export default function Login() {
   interface Post {
@@ -40,16 +44,16 @@ export default function Login() {
   const handleImageChange = (e: ChangeEvent<HTMLInputElement>) => {
     if (e.target && e.target.files && e.target.files.length > 0) {
       const file = e.target.files[0];
-
+  
       const reader = new FileReader();
       reader.onload = (event) => {
         if (event.target) {
           const dataURL = event.target.result as string;
-
+  
           setNewPost({ ...newPost, imageUrl: dataURL });
         }
       };
-
+  
       reader.readAsDataURL(file);
     }
   };
@@ -114,13 +118,13 @@ try {
       </ul>
       <h2>Create New Post</h2>
       <form onSubmit={handleSubmit}>
-        <input
+        <Input
           type="text"
           placeholder="Title"
           value={newPost.title}
           onChange={(e) => setNewPost({ ...newPost, title: e.target.value })}
         />
-        <textarea
+        <Textarea
           placeholder="Content"
           value={newPost.content}
           onChange={(e) => setNewPost({ ...newPost, content: e.target.value })}
