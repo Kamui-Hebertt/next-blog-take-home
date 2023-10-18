@@ -3,14 +3,15 @@ import Link from 'next/link';
 import { TextInput } from '@mantine/core';
 // import { Post } from '@/Interfaces/Iapi';
 import React, { useEffect, useState, ChangeEvent } from 'react';
+import { Button } from '@mantine/core';
 
 export default function Login() {
   interface Post {
-    id: number | null; // Change the type of 'id' to string
+    id: number | null; 
     title: string;
     content: string;
     imageUrl: string;
-    date: string; // Add a 'date' property
+    date: string; 
   }
 
   const [posts, setPosts] = useState<Post[] | null>([]);
@@ -59,7 +60,7 @@ export default function Login() {
     const now = new Date();
     const formattedDate = `${now.getFullYear()}-${now.getMonth() + 1}-${now.getDate()}`;
 
-    // Generate the new ID based on the current length of the 'posts' array
+
    
 if(posts){
 
@@ -129,20 +130,14 @@ try {
           accept="image/*"
           onChange={handleImageChange}
         />
-        <button type="submit">Create Post</button>
+        <Button type="submit">Create Post</Button>
       </form>
     </div>
   );
 }
 
 
-// Define the Post and NewPost interfaces
 
-
-
-
-// const number = parseInt(params.slug[0], 10);
-// console.log(number);
 
 
 
