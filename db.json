@@ -1,0 +1,39 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "sdsdf",
+      "content": "sdfsdfs",
+      "imageUrl": "",
+      "date": "2023-10-18"
+    },
+    {
+      "id": 2,
+      "title": "dsadasd",
+      "content": "dsadsada",
+      "imageUrl": "",
+      "date": "2023-10-18"
+    },
+    {
+      "id": 3,
+      "title": "dsadas",
+      "content": "dsadasdasdas",
+      "imageUrl": "",
+      "date": "2023-10-18"
+    },
+    {
+      "id": 4,
+      "title": "ss",
+      "content": "sss",
+      "imageUrl": "",
+      "date": "2023-10-18"
+    },
+    {
+      "id": 5,
+      "title": "dasd",
+      "content": "asd",
+      "imageUrl": "",
+      "date": "2023-10-18"
+    }
+  ]
+}
