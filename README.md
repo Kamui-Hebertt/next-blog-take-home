@@ -42,6 +42,10 @@ Senha: senha123
 
 Importante: Não deixe os campos de usuário e senha em branco ao fazer login.
 
+
+## Visualização de Detalhes
+Na página de postagens, você pode clicar no título de uma postagem existente para visualizar os detalhes da postagem, criar, e pesquisar. Clique no título da postagem desejada para ver mais informações.
+
 ## Dificuldades
 Durante o desenvolvimento, uma das dificuldades encontradas foi a utilização de uma API no servidor com o uso do JSON-Server. Devido ao cache padrão do JSON-Server, a API não estava funcionando adequadamente, o que afetou o comportamento esperado de algumas funcionalidades. Então usei client render em alguns componentes para solucionar o problema.
 
