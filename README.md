@@ -33,12 +33,19 @@ O servidor do frontend será iniciado e você poderá acessar o aplicativo em se
 
 Certifique-se de que o servidor JSON (JSON-Server) esteja em execução enquanto você interage com o aplicativo, pois ele fornece os dados simulados necessários para o projeto.
 
-Dificuldades
+
+Ao acessar o aplicativo, você pode usar as seguintes credenciais fictícias para fazer login:
+
+exemplo:
+Nome de usuário: usuariodompixel
+Senha: senha123
+
+Importante: Não deixe os campos de usuário e senha em branco ao fazer login.
+
+## Dificuldades
 Durante o desenvolvimento, uma das dificuldades encontradas foi a utilização de uma API no servidor com o uso do JSON-Server. Devido ao cache padrão do JSON-Server, a API não estava funcionando adequadamente, o que afetou o comportamento esperado de algumas funcionalidades. Então usei client render em alguns componentes para solucionar o problema.
-
-No entanto, a equipe está comprometida em abordar esse desafio e continuar melhorando a aplicação.
-
-Feito com ❤️ por Hebertt Nascimento para o Desafio Técnico da Empresa DompixelBlog.
 
 
 Certifique-se de seguir as instruções e manter o servidor JSON-Server em execução para que o aplicativo funcione corretamente.
+
+Feito com ❤️ por Hebertt Nascimento 

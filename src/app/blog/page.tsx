@@ -115,7 +115,7 @@ export default function Login() {
       <div className={styles.search}>
         <Input
           type="text"
-          placeholder="Pesquisr por título"
+          placeholder="Pesquisar por título"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           className={styles.input}
