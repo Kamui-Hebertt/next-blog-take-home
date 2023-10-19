@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# DompixelBlog
 
-First, run the development server:
+Este projeto, denominado DompixelBlog, é uma aplicação de blog criada com React e Next.js. Ele consiste em uma interface de blog que permite aos usuários visualizar postagens de blog existentes e criar novas postagens.
+
+## Instruções de Execução
+
+Siga as etapas abaixo para executar o projeto em seu ambiente local:
+
+1. Abra um terminal e navegue até a pasta principal do projeto.
+
+2. Dentro da pasta do projeto, instale as dependências do projeto usando o comando `npm install`:
+
+   ```bash
+
+   npm install
+   ```
+Certifique-se de que o arquivo db.json esteja presente na pasta principal do projeto.
+
+Inicie o servidor JSON usando o comando json-server para fornecer a API para o front-end:
 
 ```bash
+json-server --watch db.json --port 3001
+```
+Em um novo terminal, inicie o servidor de desenvolvimento do frontend com o comando npm run dev:
+
+```bash
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+O servidor do frontend será iniciado e você poderá acessar o aplicativo em seu navegador acessando http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Certifique-se de que o servidor JSON (JSON-Server) esteja em execução enquanto você interage com o aplicativo, pois ele fornece os dados simulados necessários para o projeto.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Dificuldades
+Durante o desenvolvimento, uma das dificuldades encontradas foi a utilização de uma API no servidor com o uso do JSON-Server. Devido ao cache padrão do JSON-Server, a API não estava funcionando adequadamente, o que afetou o comportamento esperado de algumas funcionalidades. Então usei client render em alguns componentes para solucionar o problema.
 
-## Learn More
+No entanto, a equipe está comprometida em abordar esse desafio e continuar melhorando a aplicação.
 
-To learn more about Next.js, take a look at the following resources:
+Feito com ❤️ por Hebertt Nascimento para o Desafio Técnico da Empresa DompixelBlog.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Certifique-se de seguir as instruções e manter o servidor JSON-Server em execução para que o aplicativo funcione corretamente.

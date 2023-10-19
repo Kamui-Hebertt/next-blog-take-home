@@ -9,7 +9,9 @@
   margin-bottom: 20px;
   padding: 20px;
   border: 1px solid #ccc;
-  background-color: #f9f9f9;
+  background-color: black;
+  color:white;
+  border-radius: 2rem;
 }
 
 .title {

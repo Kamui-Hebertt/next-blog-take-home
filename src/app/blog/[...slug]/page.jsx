@@ -51,7 +51,7 @@ export default function Page({ params }) {
           </p>
       </div>
     ) : (
-      <p>Loading...</p>
+      <p>Carregando...</p>
     )}
   </div>
   );
